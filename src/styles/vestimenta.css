@@ -1,0 +1,61 @@
+
+  /* G A M A   D E   C O L O R E S 
+      color: rgb(231, 214, 198);
+      color: rgb(220, 212, 199);
+      color:rgb(197, 158, 129);
+      color: rgb(233, 227, 213); */
+
+      
+  .vestimenta{
+    margin: 50px 0;
+  }
+
+  .vestimenta-title{
+    font-family: var(--cursiva);
+    
+  }
+  
+  .vestimenta-card{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px var(--grisSombra);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .vestimenta-card-title{
+    text-transform: uppercase;
+  }
+  .vestimenta-card-colors{
+    margin-top: 20px;
+    display:flex;
+    gap: 10px;
+  }
+
+  .vestimenta-card-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+  }
+  .vestimenta-card-circle:hover{
+    transform: scale(1.2);
+    box-shadow: 2px 2px 2px var(--grisSombra);
+  }
+  .vestimenta-card-1{
+    background-color:rgb(231, 214, 198) ;
+  }
+
+  .vestimenta-card-2{
+    background-color:rgb(220, 212, 199) ;
+  }
+
+  .vestimenta-card-3{
+    background-color:rgb(197, 158, 129) ;
+  }
+
+  .vestimenta-card-4{
+    background-color:rgb(233, 227, 213) ;
+  }

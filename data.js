@@ -1,0 +1,38 @@
+const data = {
+  event_type:'boda',
+  nombre_novia:'Mayra',
+  nombre_novio:'Alberto',
+  nombre_papa_novia:'Jorge Luis Rodriguez Bello',  /* ✞ */
+  nombre_mama_novia:'Maria de Jesús Soto Perez',
+  nombre_papa_novio:'Alberto Barragan Pacheco',
+  nombre_mama_novio:'Aurora Arrollo Arrollo',
+  nombre_padrino:'Baltazar Rodriguez Bello',
+  nombre_madrina:'Lorena Gutierrez Correa',
+  frase:'El amor es paciente, es bondadoso. El amor no es envidioso ni jactancioso ni orgulloso',
+  img_header:'back.webp',
+  img_fondo1:'',
+  img_fondo2:'',
+  fecha_dia:'22',
+  fecha_mes:'Noviembre',
+  fecha_year:'2024',
+  religiosa_hora:'16',
+  religiosa_minutos:'30',
+  religiosa_lugar:'Parroquia de Santa Prisca',
+  religiosa_direccion:'Plaza borda, 1',
+  religiosa_direccion_col:'Centro',
+  religiosa_direccion_cd:'Taxco de Alarcón',
+  religiosa_ubicacion:'https://maps.app.goo.gl/c63E12yMQVqzyeQe7',
+  recepcion_hora:'18',
+  recepcion_minutos:'30',
+  recepcion_lugar:'Hotel Cielito Lindo',
+  recepcion_direccion:'H. Colegio Militar, 8',
+  recepcion_direccion_col:'Barrio de Bermeja',
+  recepcion_direccion_cd:'Taxco de Alarcón',
+  recepcion_ubicacion:'https://maps.app.goo.gl/WmkBFhU6PP8Y8VBf7',
+  confirmacion_novia:'7331081467',
+  confirmacion_novio:'7335824626',
+  regalos_frase:'',
+  regalos_url:'https://mesaderegalos.liverpool.com.mx/milistaderegalos/51513332'
+}
+
+export default data

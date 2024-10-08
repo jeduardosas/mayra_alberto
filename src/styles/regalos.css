@@ -1,0 +1,36 @@
+.regalos{
+  margin-top: 100px;
+}
+
+.regalos-cards{
+  width: 95%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.regalos-card{
+  width: 95%;
+  height: 100px;
+  background-color: #EBF5FD;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  padding: 20px;
+  height: 100%;
+
+}
+.regalos-card-title{
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+.regalos-card-content p{
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: var(--cursiva);
+}
+

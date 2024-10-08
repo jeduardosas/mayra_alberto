@@ -1,0 +1,43 @@
+.timeline{
+  margin-top: 50px;
+}
+.timeline-title-cont{
+  text-align: center;
+  color:#415b78;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+
+}
+
+.custom-date-color{
+ 
+}
+@media (max-width: 768px) {
+  .timeline{
+    
+  }
+  .custom-date-color{
+    
+  }
+  
+}
+
+.timeline-title{
+ 
+}
+
+.custom-icon{
+    width: 40px;
+  }
+
+  @media (min-width: 1170px) {
+    .custom-icon{
+      width: 60px;
+    }
+    
+  }
+
+  
+

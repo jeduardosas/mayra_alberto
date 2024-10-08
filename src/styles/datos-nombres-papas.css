@@ -1,0 +1,50 @@
+.datos-nombres-papas{
+  margin-top:100px ;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.datos-nombres-papas_title p{
+  text-align: center;
+  font-family: var(--cursiva);
+  font-size: 30px;
+}
+.datos-nombres-papas_cards{  
+  margin-top: 20px;
+  border-top: solid .5px var(--color_principal) ;
+  border-bottom: solid .5px var(--color_principal) ;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.datos-nombres-papas_card{
+  padding: 10px 0; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.datos-nombres-papas_card p{
+  font-weight: bold;
+  font-size: 20px;
+}
+.datos-nombres-papas-footer{
+  margin-top: 50px;
+  font-family: var(--cursiva);
+  font-size: 50px;
+  
+}
+@media (min-width: 768px) {
+  .datos-nombres-papas_cards{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .datos-nombres-papas_title p{
+    font-size: 30px;
+  }
+}

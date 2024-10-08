@@ -1,0 +1,33 @@
+.countDown{
+  margin-top: 30px;
+  width: 100%;
+
+}
+  .cont{
+    display: flex;
+    justify-content: space-between;
+  }
+  .cont-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cont-item p{
+    font-size: 30px;
+    color: #223045;
+  }
+  .cont-item span{
+    color: #415b78;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  @media (min-width: 768px) {
+      .countDown{
+        grid-row: 2/2;
+      }
+      .cont{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+  }

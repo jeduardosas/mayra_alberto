@@ -1,0 +1,50 @@
+:root{
+  --fuentePrincipal:"Playfair Display", serif;
+  --cursiva: "Pinyon Script", cursive;
+  --fuenteSecundaria:"Poppins", sans-serif;
+  --color_principal:#A5A58D;
+  --color_secundario:#D9C5BB;
+  --color_tres:#ECE2DB;
+  --color_white:#FCF2EB;
+  --back-color:#b3bdca;
+  --grisSombra: #bdbdbd;
+  --black:#000000;
+}
+
+body{
+  height: 100vh;
+  margin: 0; 
+  background-color:var(--back-color);
+  font-family: var(--fuentePrincipal);
+  font-size: 20px;
+  color: var(--black);
+  
+}
+
+h1,h2,h3,p{
+  margin: 0;
+}
+button{
+  border:none;
+}
+a{
+  text-decoration: none;
+}
+.centrar{
+  width: 85%;
+  margin: 0 auto;
+}
+.sombra{
+  box-shadow: 10px 10px 10px var(--grisSombra);
+}
+
+.notfound{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notfound p{
+  font-size: 20px;
+}
