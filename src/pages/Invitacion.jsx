@@ -56,7 +56,7 @@ const Invitacion = () => {
           recepcion_ubicacion,
           confirmacion_novio} = data
 
-  const song = './music/song1.mp3'
+  const song = './music/song.mp3'
 
   
   const [play,setPlay] = useState(false); //estado para manejar la reproduccion del audio
@@ -242,6 +242,9 @@ const Invitacion = () => {
               </div> {/*::::::::::F I N   D E   I T E M  :::::::::: */}
 
             </section>
+            <div className="img-container">
+              <img className="img-back" src="./img/flor2.webp" alt="img_flor" />
+            </div>
 
             {/*::::::::::T I M E L I N E:::::::::: */}
             <TimeLine />
@@ -300,6 +303,10 @@ const Invitacion = () => {
 
             <div className="contador_imagen">
               <img src="./img/banner2.webp" alt="imagen_2" />
+            </div>
+
+            <div className="img-container">
+              <img className="img-back" src="./img/flor2.webp" alt="img_flor" />
             </div>
 
             <section className="confirmacion">

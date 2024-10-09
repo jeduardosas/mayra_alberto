@@ -5,7 +5,7 @@ import 'react-image-gallery/styles/css/image-gallery.css'
 const Slider = () => {
   const images = [];
 
-  getArray(10,images) //funcion que llena el array de las imagenes, el primer parametro es el numero de imagenes, el segundo es el array que se va a llenar
+  getArray(9,images) //funcion que llena el array de las imagenes, el primer parametro es el numero de imagenes, el segundo es el array que se va a llenar
 
   return(
     <div className='galeria' >
