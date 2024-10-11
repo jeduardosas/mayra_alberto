@@ -20,12 +20,20 @@
   border-top: solid var(--black) thin;
   padding: 50px 0;
 }
-.contador_frase p{
+.contador_frase p,
+.contador_frase span{
   letter-spacing: 2px;
   font-size: 16px;
   font-style: italic;
   text-align: center;
   color: #415b78;
+}
+.contador_frase span{
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 }
 .contador_imagen img{
   width: 100%;
@@ -324,6 +332,9 @@
   letter-spacing: 2px;
   font-style: italic;
 }
+.regalos-sobres-tittle h3{
+  font-size: 17px;
+}
 .regalos-vestimenta-tittle h3{
   font-size: 20px;
 }
@@ -338,8 +349,42 @@
 .regalos-sobres-body p,
 .regalos-mesa-body p{
   margin-top: 15px;
+  font-size: 15px;
   color:#f5f0ea;
+  text-align: center;
 }
+.regalos-sobres-body .regalos-sobres-body-number{
+  font-size: 20px;
+}
+.regalos-sobres-body-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.regalos-sobres-body-button{
+  margin-top: 15px;
+  padding: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius:20px ;
+  background-color:#b3bdca;
+  color: #f5f0ea;
+  font-family: var(--fuenteSecundaria);
+  cursor: pointer;
+}
+.regalos-sobres-body-button-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-alert{
+  display: block;
+  font-size: 14px;
+  font-family: var(--fuenteSecundaria);
+  color:#b3bdca;
+}
+
 @media (min-width: 768px) {
   .regalos-sobres-body p,
   .regalos-mesa-body p,
@@ -505,6 +550,7 @@
 .confirmacion-item-body-items-novio a{
   color: #f5f0ea;
   font-family: var(--fuenteSecundaria);
+  font-size: 9px;
 }
 
 /*:::::::::R E P R O D U C T O R:::::::::*/

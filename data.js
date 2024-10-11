@@ -2,13 +2,14 @@ const data = {
   event_type:'boda',
   nombre_novia:'Mayra',
   nombre_novio:'Alberto',
-  nombre_papa_novia:'Jorge Luis Rodriguez Bello',  /* ✞ */
-  nombre_mama_novia:'Maria de Jesús Soto Perez',
-  nombre_papa_novio:'Alberto Barragan Pacheco',
-  nombre_mama_novio:'Aurora Arrollo Arrollo',
-  nombre_padrino:'Baltazar Rodriguez Bello',
+  nombre_papa_novia:'Jorge Luis Rodríguez Bello',  /* ✞ */
+  nombre_mama_novia:'María de Jesús Soto Perez',
+  nombre_papa_novio:'Alberto Barragán Pacheco',
+  nombre_mama_novio:'Aurora Arroyo Arroyo',
+  nombre_padrino:'Baltazar Rodríguez Bello',
   nombre_madrina:'Lorena Gutierrez Correa',
-  frase:'El amor es paciente, es bondadoso. El amor no es envidioso ni jactancioso ni orgulloso',
+  frase:'El amor es paciente, es bondadoso. El amor no es envidioso ni jactancioso ni orgulloso.',
+  frase_autor:'1 Corintios 13:14.',
   img_header:'back.webp',
   img_fondo1:'',
   img_fondo2:'',
@@ -32,7 +33,8 @@ const data = {
   confirmacion_novia:'7331081467',
   confirmacion_novio:'7335824626',
   regalos_frase:'',
-  regalos_url:'https://mesaderegalos.liverpool.com.mx/milistaderegalos/51513332'
+  regalos_url:'https://mesaderegalos.liverpool.com.mx/milistaderegalos/51513332',
+  numero_cuenta:'4152 3137 9235 8306'
 }
 
 export default data

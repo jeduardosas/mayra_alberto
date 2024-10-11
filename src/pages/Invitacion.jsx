@@ -34,6 +34,7 @@ const Invitacion = () => {
           fecha_mes,
           fecha_year,
           frase,
+          frase_autor,
           nombre_papa_novia,
           nombre_mama_novia,
           nombre_papa_novio,
@@ -54,14 +55,17 @@ const Invitacion = () => {
           recepcion_direccion_col,
           recepcion_direccion_cd,
           recepcion_ubicacion,
-          confirmacion_novio} = data
+          confirmacion_novia,
+          confirmacion_novio,
+          numero_cuenta} = data
 
-  const song = './music/song.mp3'
+  const song = './music/song2.mp3'
 
   
   const [play,setPlay] = useState(false); //estado para manejar la reproduccion del audio
   const [modalIsOpen, setModalIsopen] = useState(true);//estado para manejar el modal
   const [isPlaying,setIsPlaying] = useState(true); //estado para manejar si el audio esta en play o pausa
+  const [copyText,setCopyText]= useState(false);
 
   //VALIDACION DE LOS PARAMS DE LA URL
   const location = useLocation();
@@ -85,6 +89,50 @@ const Invitacion = () => {
   const handlePlay = ()=>{
     setPlay(true);
     setModalIsopen(false)
+  }
+
+  const copyToClipboard = (account)=>{
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      // Usar el API moderno de Clipboard
+      navigator.clipboard.writeText(account.split(' ').join(''))
+        .then(() => {
+          setCopyText(true);
+
+          setTimeout(()=>{
+            setCopyText(false);
+          },1500)
+        })
+        .catch((err) => {
+          console.error("Error al copiar el texto: ", err);
+        });
+    } else {
+      // Fallback en caso de que Clipboard API no esté disponible
+      const textArea = document.createElement("textarea");
+      textArea.value = account.split(' ').join('');
+
+      // Asegurarse de que no sea visible
+      textArea.style.position = "fixed";
+      textArea.style.opacity = "0";
+
+      document.body.appendChild(textArea);
+      textArea.select();
+
+      try {
+        document.execCommand('copy');
+        setCopyText(true);
+
+        setTimeout(()=>{
+          setCopyText(false);
+        },1500)
+
+      } catch (err) {
+        console.error("Error al copiar el texto: ", err);
+      }
+
+      // Eliminar el elemento temporal
+      document.body.removeChild(textArea);
+    }
+  
   }
 
 
@@ -134,6 +182,7 @@ const Invitacion = () => {
               <CountDown />
               <div className="contador_frase">
                 <p>{frase}</p>
+                <span>{frase_autor}</span>
               </div>
             </section>
 
@@ -271,11 +320,24 @@ const Invitacion = () => {
 
               <div className="regalos-sobres">
                 <div className="regalos-sobres-tittle">
-                  <img src="./icons/sobres.svg" alt="" />
-                  <h3>Regalos</h3>
+                  <img src="./icons/bank.svg" alt="" />
+                  <h3>¿No sabes qué Regalarnos?</h3>
                 </div>
                 <div className="regalos-sobres-body">
-                  <p>Si deseas tener un detalle con nostros, puede ser en efectivo. Gracias</p>
+                  <p>Te dejamos nuestro numero de cuenta o bien el día del evento contaremos con un buzón de sobres para efectivo y con eso compraremos lo que haga falta a nuestro nuevo hogar.</p>
+                  <div className="regalos-sobres-body-container">
+                    <div>
+                      <p className="regalos-sobres-body-number">{numero_cuenta}</p>
+                      <p className="regalos-sobres-body-number">BBVA</p>
+                    </div>
+                    <div className="regalos-sobres-body-button-container">
+                      <button
+                        className="regalos-sobres-body-button"
+                        onClick={()=>{copyToClipboard(numero_cuenta)}}>Copiar Número
+                      </button>
+                      {copyText ? (<span className="text-alert">Número copiado</span>):''}
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -321,14 +383,14 @@ const Invitacion = () => {
                     <div className="confirmacion-item-body-items-novia">
                       <img src="./icons/novia.svg" alt="icon_novia" />
                       <button>
-                        <a href={`https://api.whatsapp.com/send?phone=52${data.confirmacion_novia}&text=¡Hola!👋%0AQuiero%20confirmar%20mi%20asistencia%0Aa%20la%20Boda%20de%20${data.nombre_novia}%20y%20${data.nombre_novio}%20💒🤵🏻👰🏻`}>Confirmar</a>
+                        <a href={`https://api.whatsapp.com/send?phone=52${confirmacion_novia}&text=¡Hola!👋%0AQuiero%20confirmar%20mi%20asistencia%0Aa%20la%20Boda%20de%20${data.nombre_novia}%20y%20${data.nombre_novio}%20💒🤵🏻👰🏻`}>Confirmar a ella</a>
                       </button>
                     </div>
 
                     <div className="confirmacion-item-body-items-novio">
                       <img src="./icons/novio.svg" alt="icon_novio" />
                       <button>
-                        <a href={`https://api.whatsapp.com/send?phone=52${data.confirmacion_novio}&text=¡Hola!👋%0AQuiero%20confirmar%20mi%20asistencia%0Aa%20la%20Boda%20de%20${data.nombre_novia}%20y%20${data.nombre_novio}%20💒🤵🏻👰🏻`}>Confirmar</a>
+                        <a href={`https://api.whatsapp.com/send?phone=52${confirmacion_novio}&text=¡Hola!👋%0AQuiero%20confirmar%20mi%20asistencia%0Aa%20la%20Boda%20de%20${data.nombre_novia}%20y%20${data.nombre_novio}%20💒🤵🏻👰🏻`}>Confirmar a él</a>
                       </button>
                     </div>
                   </div>
